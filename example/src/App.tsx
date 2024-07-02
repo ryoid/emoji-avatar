@@ -3,6 +3,7 @@ import "./styles/index.css";
 import { For, Show, createSignal } from "solid-js";
 import { createAvatar } from "emoji-avatar";
 import { EmojiAvatar } from "./components/Avatar";
+import { Navbar } from "./components/Navbar";
 
 const App = () => {
 	const [text, setText] = createSignal<string>("");
@@ -25,7 +26,8 @@ const App = () => {
 
 	return (
 		<div class="bg-neutral-900 text-neutral-50 min-h-svh">
-			<main class="container flex items-center justify-center mx-auto flex-col py-24">
+			<Navbar />
+			<main class="container md:max-w-screen-md flex items-center justify-center mx-auto flex-col py-24">
 				<AvatarList index={0} count={1} />
 				<AvatarList index={1} count={2} />
 				<AvatarList index={2} count={3} />
