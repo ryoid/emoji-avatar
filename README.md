@@ -4,7 +4,7 @@
 	<a href="https://www.npmjs.com/package/emoji-avatar"><img src="https://badgen.net/npm/v/emoji-avatar" title="NPM version"></a> <a href="https://bundlejs.com/?q=emoji-avatar"><img src="https://deno.bundlejs.com/badge?q=emoji-avatar" alt="bundle size"></a>
 </h1>
 
-Generate an emoji avatar from a string.
+Generate an emoji avatar from a string. [Demo](https://emoji-avatar.pages.dev)
 
 ## Getting Started
 
