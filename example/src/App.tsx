@@ -1,18 +1,17 @@
 import "./styles/index.css";
 
-import { For, Show, createSignal } from "solid-js";
+import { For, Show, createMemo, createSignal } from "solid-js";
 import { createAvatar } from "emoji-avatar";
 import { EmojiAvatar } from "./components/Avatar";
 import { Navbar } from "./components/Navbar";
 
 const App = () => {
 	const [text, setText] = createSignal<string>("");
-	const avatar = () => {
+	const avatar = createMemo(() => {
 		const t = text();
 		if (t == null) return;
-		console.log(createAvatar(t));
 		return createAvatar(t);
-	};
+	});
 	const otherAvatars = () => {
 		return new Array(5).fill(0).map((_, i) => {
 			const input = `${-1}${i}${Date.now()}`;
