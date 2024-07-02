@@ -1,9 +1,9 @@
 import {
 	EMOJI_RANGES,
+	type EmojiRangeName,
 	EmojiRanges,
 	TOTAL_EMOJI_RANGE,
 	getEmojiUrl,
-	type EmojiRangeName,
 } from "./emoji.js";
 import { hex } from "./encode.js";
 
