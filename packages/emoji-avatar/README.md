@@ -1,16 +1,8 @@
 
 <h1 align="center">
-<div style="display: flex; justify-content: center; gap: 4px; padding-bottom: 18px; padding-top: 18px;">
-  <div style="background: rgb(231, 245, 163); padding: 4px; border-radius: 4px; height: 64px; width: 64px;">
-    <img src="  https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f3ae.svg" width="64" height="64">
+  <div>
+  <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f649.svg" alt="avatar" width="64" height="64">
   </div>
-  <div style="background: rgb(191, 176, 248); padding: 4px; border-radius: 9999px; height: 64px; width: 64px;">
-    <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f649.svg" alt=":ant:" width="64" height="64">
-  </div>
-  <div style="background: rgb(252, 251, 202); padding: 4px; border-radius: 24px; height: 64px; width: 64px;">
-    <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f403.svg" alt=":ant:" width="64" height="64">
-  </div>
-</div>
 	<sup>Emoji Avatar</sup>
 	<br>
 	<a href="https://www.npmjs.com/package/emoji-avatar"><img src="https://badgen.net/npm/v/emoji-avatar" title="NPM version"></a> <a href="https://bundlejs.com/?q=emoji-avatar"><img src="https://deno.bundlejs.com/badge?q=emoji-avatar" alt="bundle size"></a>
