@@ -1,18 +1,10 @@
 {
   "name": "emoji-avatar",
-  "version": "0.0.1",
-  "description": "Minimal library for parsing Solana transaction, instructions and events.",
+  "version": "1.0.0",
+  "description": "Emoji Avatars generator for fun.",
   "keywords": [
-    "solana",
-    "tx",
-    "transaction",
-    "parser",
-    "anchor",
-    "borsh",
-    "jupiter",
-    "instruction",
-    "event",
-    "web3"
+    "avatar",
+    "emoji"
   ],
   "author": "Ryan Conceicao",
   "license": "MIT",
@@ -37,13 +29,6 @@
       }
     }
   },
-  "imports": {
-    "#emoji-avatar": {
-      "types": "./src/index.ts",
-      "development": "./src/index.ts",
-      "default": "./dist/index.mjs"
-    }
-  },
   "scripts": {
     "lint": "biome check src",
     "lint:fix": "biome check --write src",
@@ -51,10 +36,6 @@
     "build": "pkgroll --minify",
     "type-check": "tsc --noEmit",
     "prepack": "pnpm build && clean-pkg-json"
-  },
-  "dependencies": {
-    "@noble/hashes": "^1.4.0",
-    "@scure/base": "^1.1.7"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",

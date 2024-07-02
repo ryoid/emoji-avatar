@@ -6,33 +6,14 @@ settings:
 
 importers:
 
-  .:
-    dependencies:
-      '@noble/hashes':
-        specifier: ^1.4.0
-        version: 1.4.0
-      '@scure/base':
-        specifier: ^1.1.7
-        version: 1.1.7
-    devDependencies:
-      '@biomejs/biome':
-        specifier: 1.8.3
-        version: 1.8.3
-      clean-pkg-json:
-        specifier: ^1.2.0
-        version: 1.2.0
-      pkgroll:
-        specifier: ^2.1.1
-        version: 2.1.1(typescript@5.5.3)
-      typescript:
-        specifier: ^5.5.3
-        version: 5.5.3
-
   example:
     dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       emoji-avatar:
         specifier: workspace:*
-        version: link:..
+        version: link:../packages/emoji-avatar
       solid-js:
         specifier: ^1.8.17
         version: 1.8.18
@@ -49,6 +30,21 @@ importers:
       tailwindcss:
         specifier: ^3.4.4
         version: 3.4.4
+      typescript:
+        specifier: ^5.5.3
+        version: 5.5.3
+
+  packages/emoji-avatar:
+    devDependencies:
+      '@biomejs/biome':
+        specifier: 1.8.3
+        version: 1.8.3
+      clean-pkg-json:
+        specifier: ^1.2.0
+        version: 1.2.0
+      pkgroll:
+        specifier: ^2.1.1
+        version: 2.1.1(typescript@5.5.3)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -810,11 +806,6 @@ packages:
       '@module-federation/sdk': 0.1.6
     dev: true
 
-  /@noble/hashes@1.4.0:
-    resolution: {integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==}
-    engines: {node: '>= 16'}
-    dev: false
-
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -1241,10 +1232,6 @@ packages:
       webpack-sources: 3.2.3
     dev: true
 
-  /@scure/base@1.1.7:
-    resolution: {integrity: sha512-PPNYBslrLNNUQ/Yad37MHYsNQtK67EhWb6WtSvNLLPo7SdVZgkUjD6Dg+5On7zNwmskf8OX7I7Nx5oN+MIWE0g==}
-    dev: false
-
   /@swc/helpers@0.5.3:
     resolution: {integrity: sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==}
     dependencies:
@@ -1430,6 +1417,11 @@ packages:
     resolution: {integrity: sha512-QHBWWOtpSCv5nfMFKwyxn4WMvkYE0msxj5xiqejYGqYepWVrK7O/om1Vn6nSl/WPtYn8ge9YmSCbTi1Hp8k+Hg==}
     hasBin: true
     dev: true
+
+  /clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}

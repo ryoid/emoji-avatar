@@ -8,6 +8,7 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "emoji-avatar": "workspace:*",
     "solid-js": "^1.8.17"
   },
