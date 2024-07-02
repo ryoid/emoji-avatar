@@ -3,10 +3,28 @@ import {
 	EmojiRanges,
 	TOTAL_EMOJI_RANGE,
 	getEmojiUrl,
+	type EmojiRangeName,
 } from "./emoji.js";
 import { hex } from "./encode.js";
 
-export function createAvatar(input: string) {
+export type { EmojiRangeName };
+
+/**
+ * Represents an avatar with a background color and emoji URL.
+ */
+export type Avatar = {
+	/** The background color for the avatar */
+	color: string;
+	/** The URL of the emoji SVG */
+	url: string;
+};
+
+/**
+ * Creates an avatar based on the input string.
+ * @param {string} input - The input string to generate the avatar from (e.g.username, email).
+ * @returns {Avatar} An avatar
+ */
+export function createAvatar(input: string): Avatar {
 	const hash = djb2Hash(input);
 	const code = emojiHash(hash);
 	const color = colorHash(hash);
@@ -15,8 +33,10 @@ export function createAvatar(input: string) {
 		url: getEmojiUrl(code),
 	};
 }
-export type Avatar = ReturnType<typeof createAvatar>;
 
+/**
+ * Generates a HSL color based on the hash.
+ */
 export function colorHash(hash: number): string {
 	const hue = hash % 360;
 	const saturation = 70 + (hash % 20); // 70-90%
@@ -24,7 +44,16 @@ export function colorHash(hash: number): string {
 	return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
-export function emojiHash(hash: number, emojiRanges?: string[]): string {
+/**
+ * Selects an emoji based on the input hash.
+ * @param {number} hash - The hash to select the emoji from.
+ * @param {EmojiRangeName[]} [emojiRanges] - The emoji ranges to select from (default: all)
+ * @returns {string} The emoji hex code
+ */
+export function emojiHash(
+	hash: number,
+	emojiRanges?: EmojiRangeName[],
+): string {
 	// Calculate total range size
 	let totalRange: number | undefined;
 	if (emojiRanges) {

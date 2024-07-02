@@ -1,3 +1,51 @@
+<h1 align="center">
+	<sup>Emoji Avatar</sup>
+	<br>
+	<a href="https://www.npmjs.com/package/emoji-avatar"><img src="https://badgen.net/npm/v/emoji-avatar" title="NPM version"></a> <a href="https://bundlejs.com/?q=emoji-avatar"><img src="https://deno.bundlejs.com/badge?q=emoji-avatar" alt="bundle size"></a>
+</h1>
+
+Generate an emoji avatar from a string.
+
+## Getting Started
+
+```bash
+npm i emoji-avatar
+```
+
+```ts
+import { createAvatar } from 'emoji-avatar';
+
+const avatar = createAvatar("john doe")
+
+console.log(avatar)
+{
+    "color": "hsl(3, 73%, 83%)",
+    "url": "https://cdn.../1f368.svg"
+}
+```
+
+### React Example
+
+```tsx
+function UserAvatar({ username }) {
+  const avatar = createAvatar(username);
+  return (
+    <div style={{ background: avatar.color }}>
+      <img src={avatar.url} alt={username} />
+    </div>
+  );
+}
+```
+
+
+## API
+
+- `createAvatar(input: string): Avatar`
+- `colorHash(hash: number): string`
+- `emojiHash(hash: number, emojiRanges?: EmojiRangeName[]): string`
+
+See JSDoc comments in source for details.
+
 ## Development
 
 ```sh

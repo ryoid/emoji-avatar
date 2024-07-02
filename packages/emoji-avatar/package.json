@@ -4,7 +4,9 @@
   "description": "Emoji Avatars generator for fun.",
   "keywords": [
     "avatar",
-    "emoji"
+    "gravatar",
+    "emoji",
+    "avatar generator"
   ],
   "author": "Ryan Conceicao",
   "license": "MIT",

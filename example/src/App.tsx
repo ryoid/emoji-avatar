@@ -4,13 +4,12 @@ import { For, Show, createSignal } from "solid-js";
 import { createAvatar } from "emoji-avatar";
 import { EmojiAvatar } from "./components/Avatar";
 
-const AVATAR_SIZE = 128;
-
 const App = () => {
 	const [text, setText] = createSignal<string>("");
 	const avatar = () => {
 		const t = text();
 		if (t == null) return;
+		console.log(createAvatar(t));
 		return createAvatar(t);
 	};
 	const otherAvatars = () => {
