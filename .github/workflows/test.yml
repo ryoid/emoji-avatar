@@ -27,16 +27,16 @@ jobs:
           run_install: true
 
       - name: Type check
-        run: pnpm type-check
+        run: pnpm -r type-check
 
       - name: Build
-        run: pnpm build
+        run: pnpm -r build
 
       - name: Test
-        run: pnpm test
+        run: pnpm -r test
 
       - name: Test Node.js v16
-        run: pnpm --use-node-version=16.20.0 test
+        run: pnpm -r --use-node-version=16.20.0 test
 
       - name: Lint
-        run: pnpm lint
+        run: pnpm -r lint
